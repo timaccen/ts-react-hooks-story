@@ -23,4 +23,14 @@ function App() {
   );
 }
 
+export function divide(a: number, b: number): number {
+  // Cannot divide by 0,
+  // so in this case we will throw an error.
+  if (b === 0) {
+    throw new Error("You can't divide by zero.");
+  }
+  // Return a round division result.
+  return Math.round(a / b);
+}
+
 export default App;
