@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Greetings } from './components/Greetings';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <Greetings name="Test Name" />
+      <Greetings 
+        name="Test Name 2" 
+        onSendWaves={() => {}} />
     </div>
   );
 }
