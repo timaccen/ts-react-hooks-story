@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# TypeScript with React
+
+Based on the articles by Alex Bespoyasov articles.
+
+[How to Write Your First Unit Test in React + TypeScript App](https://www.newline.co/@bespoyasov/how-to-write-your-first-unit-test-in-react-typescript-app--ca51d0c0)
+
+[How to Write Your First Component Test in React + TypeScript App](https://www.newline.co/@bespoyasov/how-to-write-your-first-component-test-in-react-typescript-app--77f874a7)
+
+[How to Test Your First React Hook Using Testing Library](https://www.newline.co/@bespoyasov/how-to-test-your-first-react-hook-using-testing-library--159fd007)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
