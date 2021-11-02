@@ -8,6 +8,16 @@ Based on the articles by Alex Bespoyasov articles.
 
 [How to Test Your First React Hook Using Testing Library](https://www.newline.co/@bespoyasov/how-to-test-your-first-react-hook-using-testing-library--159fd007)
 
+
+## Workflow
+
+```txt
+yarn start
+yarn test
+yarn build
+serve -s build
+```
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
