@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+// same as this but more future proofs// import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Greetings } from './components/Greetings';
