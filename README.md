@@ -8,15 +8,76 @@ Based on the articles by Alex Bespoyasov articles.
 
 [How to Test Your First React Hook Using Testing Library](https://www.newline.co/@bespoyasov/how-to-test-your-first-react-hook-using-testing-library--159fd007)
 
-
 ## Workflow
 
 ```txt
 yarn start
 yarn test
 yarn build
+yarn storybook
 serve -s build
 ```
+
+## Using Styles Components
+
+Using the article [Using styled-components in TypeScript: A tutorial with examples](https://blog.logrocket.com/using-styled-components-in-typescript-a-tutorial-with-examples/) by Hafsah Emekoma as a guide for this.
+
+yarn add styled-components
+
+yarn add -D @types/styled-components 
+
+yarn add @material-ui/icons @material-ui/core
+
+
+## App requires a dependency: "babel-loader": "8.1.0"
+
+After installing Storybook, all the other commands are borken.
+
+% yarn start
+yarn run v1.22.11
+$ react-scripts start
+
+There might be a problem with the project dependency tree.
+It is likely not a bug in Create React App, but something you need to fix locally.
+
+The react-scripts package provided by Create React App requires a dependency:
+
+  "babel-loader": "8.1.0"
+
+Don't try to install it manually: your package manager does it automatically.
+However, a different version of babel-loader was detected higher up in the tree:
+
+  /Users/timothy.curchod/repos/tim/react/typescript-with-react/node_modules/babel-loader (version: 8.2.3) 
+
+Manually installing incompatible versions is known to cause hard-to-debug issues.
+
+If you would prefer to ignore this check, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+That will permanently disable this message but you might encounter other issues.
+
+To fix the dependency tree, try following the steps below in the exact order:
+
+  1. Delete package-lock.json (not package.json!) and/or yarn.lock in your project folder.
+  2. Delete node_modules in your project folder.
+  3. Remove "babel-loader" from dependencies and/or devDependencies in the package.json file in your project folder.
+  4. Run npm install or yarn, depending on the package manager you use.
+
+In most cases, this should be enough to fix the problem.
+If this has not helped, there are a few other things you can try:
+
+  5. If you used npm, install yarn (http://yarnpkg.com/) and repeat the above steps with it instead.
+     This may help because npm has known issues with package hoisting which may get resolved in future versions.
+
+  6. Check if /Users/timothy.curchod/repos/tim/react/typescript-with-react/node_modules/babel-loader is outside your project directory.
+     For example, you might have accidentally installed something in your home folder.
+
+  7. Try running npm ls babel-loader in your project folder.
+     This will tell you which other package (apart from the expected react-scripts) installed babel-loader.
+
+If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+That would permanently disable this preflight check in case you want to proceed anyway.
+
+P.S. We know this message is long but please read the steps above :-) We hope you find them helpful!
+
 
 ## Getting Started with Create React App
 
