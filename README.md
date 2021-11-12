@@ -33,6 +33,7 @@ yarn add @material-ui/icons @material-ui/core
 
 After installing Storybook, all the other commands are borken.
 
+```txt
 % yarn start
 yarn run v1.22.11
 $ react-scripts start
@@ -77,7 +78,17 @@ If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your pro
 That would permanently disable this preflight check in case you want to proceed anyway.
 
 P.S. We know this message is long but please read the steps above :-) We hope you find them helpful!
+```
 
+Followed the first set of instructions and deleted the lock file and node_modules, removed babel-loader from devDependencies and re-ran yarn.
+
+This did not solve the issue.  Followed the last instructions instead, and added a .env file with the following:
+
+```txt
+SKIP_PREFLIGHT_CHECK=true
+```
+
+Then the tests were able to run.
 
 ## Getting Started with Create React App
 
