@@ -1,18 +1,19 @@
-import * as React from 'react';
+import * as React from "react";
 // same as this but more future proofs// import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Greetings } from './components/Greetings';
+import logo from "./logo.svg";
+import "./App.css";
+import { Greetings } from "./components/Greetings";
+import Posts from "./components/Posts/Posts";
 
 function App() {
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Greetings 
-        name="Test Name 2" 
-        onSendWaves={() => {}} />
+      <Greetings name="Test Name 2" onSendWaves={() => {}} />
+      <Posts />
     </div>
   );
 }
